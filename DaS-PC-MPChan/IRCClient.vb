@@ -63,7 +63,7 @@ Public Class IRCClient
             If DkmSelectedPref.Value <> 0 Then
                 If DSCM.DkmCheckBoxSinnersOnly.Checked Then
                     If node.Indictments < 1 Then
-                        blackSet.Add(node.SteamId)
+                        Continue For
                     End If
                 End If
             End If

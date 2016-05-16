@@ -146,6 +146,7 @@ Public Class DSNode
     End Function
 
     Public Function canInvadeGuilty(other As DSNode) As Boolean
+        If other.Indictments < 1 Then Return False
         If SoulLevel - other.SoulLevel > 0 Then
             'Player is invading down
             Return other.SoulLevel >= Math.Ceiling(0.8 * SoulLevel - 50)
